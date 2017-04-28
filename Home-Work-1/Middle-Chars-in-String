@@ -1,0 +1,11 @@
+function getMiddle(s) {
+    var wordLength = s.length;
+    var middleChars;
+    if (wordLength % 2) { 
+        middleChars = s.substr((wordLength / 2), 1);   
+    } 
+    else {
+        middleChars = s.substr((wordLength / 2 - 1), 2);
+    }   
+    return middleChars; 
+}
