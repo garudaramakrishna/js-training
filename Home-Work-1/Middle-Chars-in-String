@@ -1,11 +1,11 @@
 function getMiddle(s) {
     var wordLength = s.length;
     var middleChars;
-    if (wordLength % 2) { 
-        middleChars = s.substr((wordLength / 2), 1);   
-    } 
-    else {
+    if (wordLength % 2) {
+        middleChars = s.charAt((wordLength / 2));
+    } else {
         middleChars = s.substr((wordLength / 2 - 1), 2);
-    }   
-    return middleChars; 
+    }
+    return middleChars;
 }
+/*https://www.codewars.com/kata/get-the-middle-character/train/javascript/59009a74fd69026e05000068*/
