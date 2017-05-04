@@ -7,3 +7,4 @@ function add(n) {
     }
     return singleVar;
 }
+/*https://www.codewars.com/kata/a-chain-adding-function/train/javascript/590b2f173efda4c23b000021*/
