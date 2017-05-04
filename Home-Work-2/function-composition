@@ -1,5 +1,6 @@
 function compose(f, g) {
-    return function(x) {
-        return f(g(x));
+    return function(...x) {
+        return f(g(...x));
     }
 }
+/*https://www.codewars.com/kata/function-composition/train/javascript/590b2d9d60607fa9ad0000f8*/
