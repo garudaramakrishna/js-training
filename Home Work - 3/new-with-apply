@@ -1,0 +1,13 @@
+function factory() {
+    return {
+        createGreeting() {
+            return construct(Greeting, arguments);
+        }
+    }
+
+}
+
+function construct(Class) {
+    return new(Class.bind.apply(Class, arguments))()
+}
+/*https://www.codewars.com/kata/new-with-apply/train/javascript/590b3d6ec4e50eafb7000177*/
