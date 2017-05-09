@@ -1,29 +1,52 @@
-// Let's make a Cat constructor!
- var sum = 0, count = 0;
- var Cat = function (name, weight) { 
+ var sum = 0,
+     count = [];
 
-if (typeof name == 'undefined' || typeof weight == 'undefined') {
+ var Cat = function(name, weight) {
+
+     if (typeof name == 'undefined' || typeof weight == 'undefined') {
+
          throw new Error('Cats not instantiated with name, weight: ' + name + ', ' + weight);
+
      }
-  this.name = name;
-  this.weight = weight;
-  sum += this.weight;
+     count.push(this);
+
+     this.name = name;
+
+     this._weight = weight;
+
+     sum += this._weight;
+
+     Object.defineProperty(this, "weight", {
+
+         get: function() {
+
+             return this._weight;
+
+         },
+
+         set: function(newWeight) {
+
+             sum = sum - this._weight + newWeight;
+
+             this._weight = newWeight;
+
+         }
+
+     });
+
  };
 
-Object.defineProperty(Cat, "sum", {
-     get: function () {
-         return sum;
-     },
-     set: function () {
-         sum = sum + cat.weight;
-     }
- });
-
-
  Object.defineProperty(Cat, "averageWeight", {
-     get: function () {
-         return function () {
-             return count ? sum / count : 0;
+
+     get: function() {
+
+         return function() {
+
+             return count ? sum / count.length : 0;
+
          };
+
      }
+
  });
+/*https://www.codewars.com/kata/using-closures-to-share-class-state/train/javascript/590c2fdc751b37692600016a*/
