@@ -49,4 +49,4 @@
      }
 
  });
-/*https://www.codewars.com/kata/using-closures-to-share-class-state/train/javascript/590c2fdc751b37692600016a*/
+ /*https://www.codewars.com/kata/using-closures-to-share-class-state/train/javascript/590c2fdc751b37692600016a*/
