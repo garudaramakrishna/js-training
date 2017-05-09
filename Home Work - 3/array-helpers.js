@@ -1,12 +1,12 @@
 Array.prototype.square = function() {
     return this.map(function(num) {
-        return num * num;
+        return Math.pow(num,2);
     });
 }
 
 Array.prototype.cube = function() {
     return this.map(function(num) {
-        return num * num * num;
+        return Math.pow(num,3);
     });
 }
 
@@ -31,4 +31,4 @@ Array.prototype.odd = function() {
         return num % 2 !== 0
     });
 }
-/*https://www.codewars.com/kata/array-helpers/train/javascript/590b36d2c4e50ef53f00004a*/
+/*https://www.codewars.com/kata/array-helpers/train/javascript/5911ca045d7b5833ce00002a*/
